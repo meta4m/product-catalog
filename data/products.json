@@ -1,0 +1,5 @@
+[
+  { "id": 1, "collectionId": 1, "name": "Gold Necklace", "price": 120 },
+  { "id": 2, "collectionId": 1, "name": "Silver Necklace", "price": 80 },
+  { "id": 3, "collectionId": 2, "name": "Diamond Bracelet", "price": 250 }
+]
