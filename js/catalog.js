@@ -9,9 +9,14 @@ fetch("data/products.json")
       .forEach(p => {
         container.innerHTML += `
           <div class="card">
-            <a href="product.html?id=${p.id}">
-              ${p.name} - $${p.price}
-            </a>
+            <img src="${p.images[0]}" alt="">
+            <div class="card-content">
+              <h3>${p.name}</h3>
+              <p>$${p.price}</p>
+              <a href="product.html?id=${p.id}">
+                <button>View</button>
+              </a>
+            </div>
           </div>`;
       });
   });

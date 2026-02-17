@@ -5,7 +5,11 @@ fetch("data/collections.json")
     data.forEach(c => {
       container.innerHTML += `
         <div class="card">
-          <a href="collection.html?id=${c.id}">${c.name}</a>
+          <div class="card-content">
+            <a href="collection.html?id=${c.id}">
+              <h2>${c.name}</h2>
+            </a>
+          </div>
         </div>`;
     });
   });
