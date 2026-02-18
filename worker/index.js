@@ -4,7 +4,10 @@ export default {
     const hostname = url.hostname;
 
     // Extract subdomain
-    const subdomain = hostname.split('.')[0];
+    let subdomain = hostname.split('.')[0];
+    if (hostname.endsWith('workers.dev')) {
+        subdomain = url.searchParams.get('tenant') || 'demo';
+    }
 
     // Lookup tenant
     const tenantQuery = await env.stores_db
